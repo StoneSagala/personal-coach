@@ -1,0 +1,23 @@
+# Claude Code session data — do not publish
+.claude/scheduled_tasks.json
+
+# Obsidian vault config
+.obsidian/
+
+# User data — these get written during setup and contain personal info
+# Uncomment if you want to keep your data private when forking
+# _shared/user-profile.md
+# _shared/goals.md
+# _shared/communication.md
+# Dietitian/_config/
+# Personal Trainer/_config/
+# Dietitian/Logs/
+# Personal Trainer/Logs/
+# Dietitian/Learnings/
+# Personal Trainer/Learnings/
+# Synthesis/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
