@@ -66,11 +66,23 @@ Activity multipliers:
 - Very active (6–7 days/week hard training): × 1.725
 
 Goal adjustment:
-- Cutting: TDEE − 300 to −500 cal/day
-- Maintaining: TDEE
-- Bulking: TDEE + 250 to +500 cal/day
+| Goal | Calorie Adjustment | Target Rate of Change |
+|------|-------------------|----------------------|
+| Cutting | TDEE − 300 to − 500 cal/day | Lose 0.5–1% bodyweight/week |
+| Maintaining | TDEE ± 100 | ±0.5 lb/week variance is normal |
+| Bulking (lean) | TDEE + 200 to + 300 cal/day | Gain 0.25–0.5 lb/week |
+| Bulking (aggressive) | TDEE + 400 to + 500 cal/day | Gain up to 1 lb/week |
 
-Protein target: 0.75g × bodyweight in lbs (floor — never drop below this).
+Minimum calorie floors (never go below): 1,500 cal/day for men, 1,200 cal/day for women.
+
+If the calculated target falls below the floor, set the target at the floor and note that the deficit is limited by the safety minimum.
+
+Protein target by goal (floor — never drop below the lower end):
+- Cutting: 0.8–1.0g × bodyweight in lbs
+- Maintaining: 0.7–0.8g × bodyweight in lbs
+- Bulking: 0.7–0.9g × bodyweight in lbs
+
+Recalculate TDEE and protein when weight changes 10+ lbs in either direction.
 
 Show the user the calculation and confirm before writing it to goals.md.
 
@@ -126,14 +138,14 @@ Write all 7 files after the conversation. Confirm each with the user before writ
 | Macro | Target | Notes |
 |-------|--------|-------|
 | Calories | [TDEE ± adjustment] | |
-| Protein | [0.75 × lbs]g | Floor — never go below |
+| Protein | [goal-appropriate range × lbs]g | Floor — never go below lower end |
 
 ## Weight Log
 | Date | Weight | Notes |
 |------|--------|-------|
 | [today] | [starting weight] | Setup baseline |
 
-> Recalculate protein when weight changes 5+ lbs.
+> Recalculate TDEE and protein when weight changes 10+ lbs.
 ```
 
 ### 3. `_shared/communication.md`

@@ -17,13 +17,18 @@ Protein ensures muscle retention on a cut. Total calories determines fat loss or
 Set from TDEE (Total Daily Energy Expenditure) — see `../goals.md` for the user's calculated target.
 
 **Goal adjustments:**
-| Goal | Adjustment |
-|------|-----------|
-| Cutting | TDEE − 300 to − 500 cal/day |
-| Maintaining | TDEE |
-| Bulking | TDEE + 250 to + 500 cal/day |
+| Goal | Calorie Adjustment | Target Rate of Change | Notes |
+|------|-------------------|----------------------|-------|
+| Cutting | TDEE − 300 to − 500 cal/day | Lose 0.5–1% bodyweight/week | Never go below 1,500 cal (men) / 1,200 cal (women) |
+| Maintaining | TDEE ± 100 | ±0.5 lb/week variance is normal | No fixed surplus or deficit needed |
+| Bulking (lean) | TDEE + 200 to + 300 cal/day | Gain 0.25–0.5 lb/week | Minimizes fat gain alongside muscle |
+| Bulking (aggressive) | TDEE + 400 to + 500 cal/day | Gain up to 1 lb/week | Faster muscle gain, more fat accumulated |
 
 Targets are the same every day (weekday = weekend). No built-in cheat days.
+
+Losing faster than 1% bodyweight/week increases muscle loss risk even with adequate protein. If the user is losing faster, reduce the deficit before raising protein.
+
+**TDEE recalculation:** Recalculate every 10 lbs of weight change in either direction. Metabolic adaptation during a cut lowers TDEE beyond what weight loss alone predicts — the calculation must be re-run, not just estimated.
 
 **TDEE Calculation (Mifflin-St Jeor):**
 
@@ -40,9 +45,15 @@ Activity multipliers:
 
 ## Protein Target
 
-**Minimum: 0.75g × bodyweight in lbs**
+Protein target varies by goal — higher protein during a cut protects muscle when calories are restricted:
 
-This is a floor, not a soft suggestion. Never drop below it regardless of calorie situation. Recalculate when weight changes 5+ lbs.
+| Goal | Target |
+|------|--------|
+| Cutting | 0.8–1.0g × bodyweight in lbs |
+| Maintaining | 0.7–0.8g × bodyweight in lbs |
+| Bulking | 0.7–0.9g × bodyweight in lbs |
+
+Use the lower end of the range as the floor — never drop below it regardless of calorie situation. Recalculate when weight changes 10+ lbs.
 
 ---
 
