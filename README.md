@@ -6,6 +6,31 @@ An agent-native workspace for Claude Code. Two specialist pipelines (Dietitian +
 
 ---
 
+## Quick Start
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/StoneSagala/personal-coach.git
+cd personal-coach
+
+# 2. Open in Claude Code
+claude
+```
+
+Then say:
+
+> *"I'm new here"* or *"Let's do setup"*
+
+Setup takes about 10 minutes. It builds your profile, calculates your calorie and protein targets, and generates your first workout plan. After that:
+
+> *"Log food"* — start tracking nutrition  
+> *"Log workout"* or *"What's next?"* — get today's session and log it  
+> *"What should I eat?"* — meal suggestions based on your remaining budget
+
+No slash commands. No forms. Just talk to it.
+
+---
+
 ## Why This Exists
 
 Most fitness tools force you to juggle apps: one for food, one for workouts, one for body weight. None of them talk to each other, and none of them remember what happened last Tuesday. You do the work of connecting the dots.
@@ -27,31 +52,6 @@ This workspace puts both specialists in one place, runs progressive overload aut
 | **Auto weekly + monthly reviews** | Hook fires on Sunday and the 1st — runs both specialists then Synthesis before responding to your first message |
 | **Goal pace estimate** | Monthly Synthesis calculates "at this rate, ~X weeks to goal" from your weight trend |
 | **All data stays local** | Markdown files, git-friendly, no accounts, no subscriptions |
-
----
-
-## Quick Start
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/[your-username]/personal-coach.git
-cd personal-coach
-
-# 2. Open in Claude Code
-claude
-```
-
-Then say:
-
-> *"I'm new here"* or *"Let's do setup"*
-
-Setup takes about 10 minutes. It builds your profile, calculates your calorie and protein targets, and generates your first workout plan. After that:
-
-> *"Log food"* — start tracking nutrition  
-> *"Log workout"* or *"What's next?"* — get today's session and log it  
-> *"What should I eat?"* — meal suggestions based on your remaining budget
-
-No slash commands. No forms. Just talk to it.
 
 ---
 
