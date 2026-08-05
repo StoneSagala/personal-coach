@@ -20,12 +20,23 @@ Do NOT load: Learnings files, workout logs.
 ## Process
 
 1. Identify what was eaten — ask if not stated.
-2. Get accurate cal/protein numbers using USDA Food Data Central:
+2. Get accurate cal/protein numbers — always follow this lookup order, stopping at the first good result:
+
+   **Step 1 — USDA Food Data Central (always try first)**
    - Read the API key from `_shared/config/api-keys.md` (value after `USDA_FDC_API_KEY=`). If the file doesn't exist, use `DEMO_KEY`.
    - WebFetch `https://api.nal.usda.gov/fdc/v1/foods/search?query=[food+name]&pageSize=5&dataType=Branded,Foundation,SR%20Legacy&api_key=[KEY]`
-   - From the response, pick the best matching food. Pull `Energy` (kcal) and `Protein` from `foodNutrients`. Scale per-100g values to the actual portion size if needed.
-   - **If no good match is found:** Fall back to WebSearch `"[food item] nutrition facts"`.
-   - Err conservative — round calories up, protein down when uncertain.
+   - Pick the best matching food. Pull `Energy` (kcal) and `Protein` from `foodNutrients`. Scale per-100g values to the actual portion size if needed.
+   - A "good result" means the food name and brand/description clearly match what the user ate.
+
+   **Step 2 — WebSearch (if FDC has no good match, or it's a restaurant/chain/regional brand)**
+   - Restaurants, fast food chains, and regional brands often have exact macros on their own site or nutrition databases — these are more reliable than FDC entries for those items.
+   - WebSearch `"[restaurant or brand] [item] nutrition facts calories protein"`
+   - Use the published numbers from the brand's official site or a recognized nutrition database.
+
+   **Step 3 — Estimate (last resort only)**
+   - Use only when Steps 1 and 2 both fail to return a usable match.
+   - Estimate from nutritional knowledge. Err conservative — round calories up, protein down when uncertain. Note the estimate in the log entry.
+
 3. Append to today's log with running totals.
 4. Status check after logging:
    - On track: brief acknowledgment only.
