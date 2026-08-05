@@ -1,6 +1,9 @@
 # Claude Code session data — do not publish
 .claude/scheduled_tasks.json
 
+# API keys — never commit, stays local
+_shared/config/api-keys.md
+
 # Obsidian vault config
 .obsidian/
 
