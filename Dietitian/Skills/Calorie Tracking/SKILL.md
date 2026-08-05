@@ -26,12 +26,14 @@ Do NOT load: Learnings files, workout logs.
 4. Status check after logging:
    - On track: brief acknowledgment only.
    - Protein target at risk: flag now, suggest a high-protein option.
+   - Significantly under calories with little eating time left: flag it, give remaining cal, suggest something to eat to close the gap.
    - Calorie cap at risk: flag it, give the user the number.
 
 **End of day** — when user says they're done eating:
 - Show final cal/protein vs. targets
 - One coaching observation based on `communication.md` tone
 - Note protein hit or missed — state the fact, no lecture
+- If significantly under calories: flag the shortfall with the same weight as going over — note the impact on recovery and progress, no lecture
 
 ---
 
@@ -61,6 +63,7 @@ Load `Dietitian/Skills/Meal Guidance/SKILL.md`
 | Nothing listed | Ask "what did you eat or drink?" |
 | Retroactive log | Mark `[retroactive]`, estimate high |
 | Over calories | State the number, ask if they want to adjust tomorrow — no lecture |
+| Under calories at end of day | Flag the shortfall, note the impact on recovery/progress — same weight as going over, no lecture |
 | Skipped meal | Log nothing, don't guilt |
 | High-activity day | Flag overage as expected, note it, don't count against adherence |
 | "How much do I have left?" | Calculate remaining cal and protein from today's log vs. targets — respond immediately, no new log entry |
