@@ -11,6 +11,7 @@ Log food intake, update daily running totals, review at end of day.
 - `Dietitian/_config/eating-preferences.md` — restrictions
 - `Dietitian/Logs/Daily/YYYY-MM-DD.md` — today's log (create if needed)
 - `_shared/references/nutrition-principles.md` — logging format
+- `_shared/config/api-keys.md` — USDA FDC API key (optional — fall back to `DEMO_KEY` if file doesn't exist)
 
 Do NOT load: Learnings files, workout logs.
 
@@ -19,9 +20,12 @@ Do NOT load: Learnings files, workout logs.
 ## Process
 
 1. Identify what was eaten — ask if not stated.
-2. Get accurate cal/protein numbers:
-   - **Branded item or restaurant:** WebSearch `"[brand/restaurant] [item] nutrition facts"` — use the actual published numbers. Most chains post exact macros on their site.
-   - **Whole food / home cooking:** Estimate from nutritional knowledge. Err conservative — round calories up, protein down when uncertain.
+2. Get accurate cal/protein numbers using USDA Food Data Central:
+   - Read the API key from `_shared/config/api-keys.md` (value after `USDA_FDC_API_KEY=`). If the file doesn't exist, use `DEMO_KEY`.
+   - WebFetch `https://api.nal.usda.gov/fdc/v1/foods/search?query=[food+name]&pageSize=5&dataType=Branded,Foundation,SR%20Legacy&api_key=[KEY]`
+   - From the response, pick the best matching food. Pull `Energy` (kcal) and `Protein` from `foodNutrients`. Scale per-100g values to the actual portion size if needed.
+   - **If no good match is found:** Fall back to WebSearch `"[food item] nutrition facts"`.
+   - Err conservative — round calories up, protein down when uncertain.
 3. Append to today's log with running totals.
 4. Status check after logging:
    - On track: brief acknowledgment only.

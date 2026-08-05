@@ -39,6 +39,7 @@ Group 3 — Nutrition:
 - What cuisines or food styles do you like?
 - What proteins do you eat most?
 - Do you cook and meal prep, or mostly eat out?
+- (Optional) Do you have a USDA Food Data Central API key? It's free at fdc.nal.usda.gov and gives more accurate nutrition data. If you have one, paste it here and I'll save it locally. If not, a shared demo key will be used automatically — no action needed.
 
 Group 4 — Coaching style:
 - How do you want progress communicated? Direct and blunt, encouraging, or somewhere in between?
@@ -281,6 +282,18 @@ Non-negotiable. Only [Name] can change this file.
 
 *Added as consistent patterns emerge from logs.*
 ```
+
+---
+
+### 8. `_shared/config/api-keys.md` (only if user provided a key)
+
+```markdown
+# API Keys
+
+USDA_FDC_API_KEY=[key the user provided]
+```
+
+If the user did not provide a key, skip this file — the Dietitian will use `DEMO_KEY` automatically.
 
 ---
 
